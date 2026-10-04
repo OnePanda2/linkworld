@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0E0E10">
+<meta name="robots" content="noindex">
+<title>Own your page · Link World</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js"></script>
+<style>
+  .own{display:grid;gap:44px;padding:48px 0 90px;align-items:start}
+  @media (min-width:900px){.own{grid-template-columns:auto minmax(0,1fr);gap:72px;padding-top:64px}}
+  .stage{display:grid;justify-items:center;gap:16px}
+  .stage{order:2}
+  @media (min-width:900px){.stage{order:0;position:sticky;top:96px}}
+  .phone.live{width:300px;padding:9px}
+  .phone.live iframe{display:block;width:100%;height:100%;border:0;border-radius:30px;background:#fff}
+  .stage a.full{font-size:15px;font-weight:600;color:var(--muted)}
+  .own h1{font-size:clamp(42px,6vw,72px);margin:16px 0 16px}
+  .form{display:grid;gap:16px;margin-top:30px;padding:28px;border-radius:24px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+  .form h2{font-size:26px;letter-spacing:-.02em}
+  .form label{display:grid;gap:8px;font-weight:700;font-size:15px}
+  .field{display:flex;align-items:center;min-height:54px;border-radius:14px;background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--line);overflow:hidden}
+  .field:focus-within{box-shadow:inset 0 0 0 2px var(--amber)}
+  .field span{padding-left:16px;color:var(--muted);font-weight:500;white-space:nowrap;font-size:15px}
+  .field input{flex:1;min-width:0;height:54px;padding:0 16px 0 2px;border:0;background:none;color:var(--text);font:600 16px var(--body);outline:none}
+  .field.plain input{padding-left:16px}
+  .form small{color:var(--muted);font-weight:500;font-size:14px}
+  .form .err{color:#FF8A7A;font-size:14.5px;min-height:1.2em}
+  .form .fine{color:var(--muted);font-size:13.5px}
+  .form .fine a{color:var(--text)}
+  .done{display:grid;gap:10px}
+  .done b{font:800 26px/1.1 var(--display)}
+  @media (max-width:420px){.field span{display:none}.field input{padding-left:16px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/logo.svg" alt="">Link World</a>
+    <nav><a href="../#examples">Examples</a><a href="../#how">How it works</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="own" id="has-page" hidden>
+    <div class="stage">
+      <div class="phone live"><iframe id="frame" title="Your page" loading="eager"></iframe></div>
+      <a class="full" id="full" href="#" target="_blank" rel="noopener">Open the full page ↗</a>
+    </div>
+    <div>
+      <span class="kicker">Own your page</span>
+      <h1 id="title">Make this page yours.</h1>
+      <p class="lede">Right now it's a preview that lives only in its link. Owning it puts it live at your own address, ready for your bio.</p>
+      <ul class="perks">
+        <li><b>Your own address</b><span>linkworld.siddheshthapa.com/<span id="h1">yourname</span>, short enough for any bio.</span></li>
+        <li><b>Change it any time</b><span>Ask for edits ("add my podcast", "make it darker") and your page updates.</span></li>
+        <li><b>See who visits</b><span>Views, link clicks and where visitors come from, without cookies.</span></li>
+        <li><b>No preview bar</b><span>Visitors see your page and nothing else.</span></li>
+      </ul>
+      <div class="price"><b>Free for 14 days</b><span>Then a small monthly price keeps it live. You'll see the price before anything is charged.</span></div>
+
+      <form class="form" id="claim" hidden novalidate onsubmit="return false">
+        <h2>Reserve your page</h2>
+        <label>Your address
+          <div class="field"><span>linkworld.siddheshthapa.com/</span><input id="handle" name="handle" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="30" required></div>
+        </label>
+        <label>Your email
+          <div class="field plain"><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <small>We'll write when your page is live. Nothing else.</small>
+        </label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn primary" type="submit" id="go">Reserve my page</button>
+        <p class="fine">By reserving, you agree to the <a href="../terms/">terms</a> and <a href="../privacy/">privacy policy</a>. You must be 16 or older.</p>
+      </form>
+      <div class="form done" id="reserved" hidden role="status">
+        <b>Reserved.</b>
+        <p class="lede" id="reserved-text"></p>
+      </div>
+      <div class="form" id="soon" hidden>
+        <h2>Owning opens soon</h2>
+        <p class="lede">Your page is saved inside its link, and nowhere else yet. Copy the link and keep it: when owning opens, it's how you'll claim this page.</p>
+        <div class="row"><button class="btn primary" type="button" id="copy">Copy my page link</button></div>
+        <p class="toast" id="toast" role="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc" id="no-page" hidden>
+    <span class="kicker">Own your page</span>
+    <h1>There's no page here yet.</h1>
+    <p class="lede">This address shows a page you made with Link World. Make yours in ChatGPT first. It takes about two minutes.</p>
+    <div class="row" style="margin-top:28px"><a class="btn primary" href="../#start">Make my page</a><a class="btn ghost" href="../open/">I have page code</a></div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/logo.svg" alt="">Link World</a>
+    <nav><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a></nav>
+  </div>
+</footer>
+
+<script>
+(async () => {
+  const hash = location.hash, $ = id => document.getElementById(id);
+  if (!/^#(z\.)?[A-Za-z0-9_-]{20,}$/.test(hash)) { $('no-page').hidden = false; return; }
+  $('has-page').hidden = false;
+  const link = new URL('../p/' + hash, location.href).href;
+  $('frame').src = '../p/?embed' + hash;
+  $('full').href = link;
+
+  /* read the name and handle out of the page, to fill in the form */
+  let spec = {};
+  try {
+    let h = hash.slice(1); const z = h.startsWith('z.'); if (z) h = h.slice(2);
+    let data = Uint8Array.from(atob(h.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+    if (z) data = new Uint8Array(await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
+    spec = JSON.parse(new TextDecoder().decode(data)) || {};
+  } catch (_) { }
+  const name = typeof spec.name === 'string' ? spec.name.trim().slice(0, 40) : '';
+  const handle = (typeof spec.handle === 'string' ? spec.handle : name).toLowerCase().replace(/^@/, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
+  if (name) $('title').textContent = 'Make ' + name + (/s$/i.test(name) ? "' " : "'s ") + 'page yours.';
+  if (handle) { $('h1').textContent = handle; $('handle').value = handle; }
+
+  if (!window.LW_API) {
+    $('soon').hidden = false;
+    $('copy').addEventListener('click', () => {
+      const ok = () => { $('toast').textContent = 'Copied. Keep it somewhere safe, like a note on your phone.'; };
+      const no = () => { $('toast').textContent = 'Copy this link: ' + link; };
+      navigator.clipboard ? navigator.clipboard.writeText(link).then(ok, no) : no();
+    });
+    return;
+  }
+  const form = $('claim'); form.hidden = false;
+  $('handle').addEventListener('input', e => { e.target.value = e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ''); $('h1').textContent = e.target.value || 'yourname'; });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const h = $('handle').value.trim(), m = $('email').value.trim();
+    if (!/^[a-z0-9](?:[a-z0-9-]{0,28}[a-z0-9])?$/.test(h)) { $('err').textContent = 'Your address can use letters, numbers and dashes (2 to 30).'; $('handle').focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(m)) { $('err').textContent = 'That email address looks incomplete.'; $('email').focus(); return; }
+    $('err').textContent = ''; $('go').disabled = true; $('go').textContent = 'Reserving…';
+    try {
+      const r = await fetch(window.LW_API + '/claim', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ handle: h, email: m, spec: hash.slice(1) }) });
+      const out = await r.json().catch(() => ({}));
+      if (!r.ok || !out.ok) throw new Error(out.error || 'Something went wrong. Try again in a minute.');
+      form.hidden = true; $('reserved').hidden = false;
+      $('reserved-text').textContent = `We've saved linkworld.siddheshthapa.com/${h} for you, and we'll write to ${m} when your page is live.`;
+    } catch (err) {
+      $('err').textContent = err.message; $('go').disabled = false; $('go').textContent = 'Reserve my page';
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Lumi Park",
+  "handle": "lumi.skin",
+  "page": "example-lumi",
+  "layout": "stack",
+  "theme": {
+    "bg": "#F4E6EA", "bg2": "#E7AFC3", "surface": "#FFF7F9", "text": "#2A1520", "muted": "#6B4F5C",
+    "accent": "#AE2257", "accentText": "#FFFFFF",
+    "display": "Fraunces", "body": "DM Sans", "displayWeight": 600, "italic": true, "tracking": "tight",
+    "radius": "pill", "buttons": "solid", "cards": "glass", "bgStyle": "mesh"
+  },
+  "hero": {
+    "eyebrow": "Esthetician · sensitive skin",
+    "headline": "Honest reviews. Gentle routines. Nothing I haven't tried on my own skin.",
+    "art": { "type": "monogram" }
+  },
+  "cta": { "label": "My 4-step routine", "url": "https://example.com/routine" },
+  "sections": [
+    { "type": "links", "items": [
+      { "label": "Shop my favourites", "note": "Everything I actually repurchase", "url": "https://example.com/favourites", "icon": "shop" },
+      { "label": "Book a skin consult", "note": "30 minutes on video", "url": "https://example.com/consult", "icon": "calendar" },
+      { "label": "Which skin type are you?", "note": "A two-minute quiz", "url": "https://example.com/quiz", "icon": "star" },
+      { "label": "The Gentle Edit", "note": "A short newsletter every Sunday", "url": "https://example.com/newsletter", "icon": "mail" } ] },
+    { "type": "offer", "badge": "Code LUMI15", "title": "15% off the barrier cream I use every night", "cta": { "label": "Use my code", "url": "https://example.com/code" } },
+    { "type": "ticker", "items": [ "Fragrance-free", "Patch-tested", "No paid reviews" ] }
+  ],
+  "socials": [
+    { "type": "instagram", "url": "https://www.instagram.com/" },
+    { "type": "tiktok", "url": "https://www.tiktok.com/" },
+    { "type": "youtube", "url": "https://www.youtube.com/" },
+    { "type": "pinterest", "url": "https://www.pinterest.com/" }
+  ]
+}

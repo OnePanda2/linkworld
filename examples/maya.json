@@ -1,0 +1,43 @@
+{
+  "name": "Maya Okafor",
+  "handle": "maya.makes.pots",
+  "page": "example-maya",
+  "layout": "editorial",
+  "theme": {
+    "bg": "#E6EAE3", "bg2": "#B9CBBE", "surface": "#F2F4EF", "text": "#18221E", "muted": "#4F5D56",
+    "accent": "#2C5B4E", "accentText": "#F2F4EF",
+    "display": "Instrument Serif", "body": "Karla", "tracking": "tight",
+    "radius": "soft", "buttons": "outline", "cards": "outline", "bgStyle": "grain"
+  },
+  "hero": {
+    "eyebrow": "Stoneware, made in small batches",
+    "headline": "Pots for slow mornings and long dinners.",
+    "sub": "I throw, glaze and fire every piece by hand in a converted garage. New work drops once a month and usually sells out within a day.",
+    "art": { "type": "shapes", "style": "arches" }
+  },
+  "cta": { "label": "Shop the October drop", "url": "https://example.com/shop" },
+  "cta2": { "label": "Book a wheel class", "url": "https://example.com/classes" },
+  "sections": [
+    { "type": "gallery", "title": "Out of this month's kiln", "items": [
+      { "caption": "Celadon mugs", "color": "#8DB3A2" },
+      { "caption": "Speckled bowls", "color": "#CFC3AC" },
+      { "caption": "Ash-glaze vases", "color": "#5A6955" },
+      { "caption": "Seconds, 30% off", "color": "#A97F63" } ] },
+    { "type": "about", "title": "Made slowly, on purpose", "text": "I started on a secondhand wheel during a long winter and never stopped. Everything is food-safe, dishwasher-safe and meant to be used every day, not kept on a shelf.\nGlazes are mixed in small buckets, so no two firings come out the same. If you love a colour, grab it; it may not come back." },
+    { "type": "offer", "badge": "Next drop", "title": "Friday, 6 pm Eastern. Forty pieces.", "text": "People on the list get the shop link an hour early. One email a month, nothing else.", "cta": { "label": "Get early access", "url": "https://example.com/list" } },
+    { "type": "links", "title": "Everything else", "items": [
+      { "label": "Wheel classes", "note": "Saturdays, four people per class", "url": "https://example.com/classes", "icon": "calendar" },
+      { "label": "Wholesale for cafés", "note": "Mugs and plates in your colours", "url": "mailto:hello@example.com", "icon": "mail" },
+      { "label": "Studio journal", "note": "Glaze tests and failures", "url": "https://example.com/journal", "icon": "book" } ] },
+    { "type": "faq", "items": [
+      { "q": "Do you ship?", "a": "Yes, across the US and Canada. Every piece is double-boxed, and breakages are replaced free." },
+      { "q": "Can I order a custom set?", "a": "Twice a year I open a few custom slots. Join the list to hear first." } ] },
+    { "type": "follow", "title": "In the studio" }
+  ],
+  "socials": [
+    { "type": "instagram", "url": "https://www.instagram.com/" },
+    { "type": "tiktok", "url": "https://www.tiktok.com/" },
+    { "type": "pinterest", "url": "https://www.pinterest.com/" }
+  ],
+  "footer": "Studio visits by appointment."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Sam Carter",
+  "handle": "samcarter.careers",
+  "page": "example-sam",
+  "layout": "split",
+  "theme": {
+    "bg": "#F2F4F8", "bg2": "#C7D3FF", "surface": "#FFFFFF", "text": "#0B1424", "muted": "#4A5466",
+    "accent": "#2B50FF", "accentText": "#FFFFFF",
+    "display": "Bricolage Grotesque", "body": "Inter", "displayWeight": 700, "tracking": "tight",
+    "radius": "soft", "buttons": "outline", "cards": "shadow", "bgStyle": "grid"
+  },
+  "hero": {
+    "eyebrow": "Career coach for people in tech",
+    "headline": "Land the offer, not just the interview.",
+    "sub": "Ten years as a tech recruiter. Now I help engineers and product managers tell their story, get through the loop and negotiate like they mean it.",
+    "art": { "type": "shapes", "style": "tiles" }
+  },
+  "cta": { "label": "Book a free 15-minute call", "url": "https://calendly.com/" },
+  "cta2": { "label": "Get my resume template", "url": "https://example.com/template" },
+  "sections": [
+    { "type": "proof", "items": [ { "n": "350+", "l": "offers landed" }, { "n": "+$18k", "l": "average raise" }, { "n": "4.9/5", "l": "from 200 reviews" } ] },
+    { "type": "list", "title": "How I can help", "items": [
+      { "title": "Resume and LinkedIn rewrite", "text": "Built around the roles you want, not the ones you had.", "icon": "book" },
+      { "title": "Mock interviews", "text": "Real questions, honest feedback, recorded for you.", "icon": "play" },
+      { "title": "Salary negotiation", "text": "A script for every stage, from recruiter call to offer.", "icon": "briefcase" },
+      { "title": "Career change plan", "text": "Moving into product or design? We map the bridge.", "icon": "arrow" } ] },
+    { "type": "offer", "badge": "Most booked", "title": "The Interview Sprint", "text": "Three 60-minute sessions over two weeks: your story, a full mock loop, and a negotiation script for the offer.", "price": "$390", "cta": { "label": "Book the sprint", "url": "https://calendly.com/" } },
+    { "type": "quote", "text": "Sam's negotiation script got me $22k more than the first offer. Best money I've spent on my career.", "by": "Alex, senior engineer" },
+    { "type": "faq", "items": [
+      { "q": "Do you work with new grads?", "a": "Yes. The resume rewrite and mock interviews work at any level." },
+      { "q": "What if I don't get an offer?", "a": "Sprint clients get a free follow-up session after their next three interviews." } ] },
+    { "type": "links", "title": "Free help", "items": [
+      { "label": "The Offer Letter", "note": "Weekly newsletter", "url": "https://example.com/newsletter", "icon": "mail" },
+      { "label": "Interview breakdowns", "note": "On YouTube", "url": "https://www.youtube.com/" },
+      { "label": "LinkedIn", "note": "Daily job-search tips", "url": "https://www.linkedin.com/" } ] }
+  ],
+  "socials": [
+    { "type": "briefcase", "url": "https://www.linkedin.com/" },
+    { "type": "youtube", "url": "https://www.youtube.com/" },
+    { "type": "x", "url": "https://x.com/" }
+  ]
+}

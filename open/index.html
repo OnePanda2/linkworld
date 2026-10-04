@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0E0E10">
+<title>Open your page · Link World</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  textarea{display:block;width:100%;min-height:240px;margin-top:28px;padding:18px;border:0;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--text);font:500 14px/1.5 ui-monospace,Menlo,Consolas,monospace;resize:vertical;outline:none}
+  textarea:focus{box-shadow:inset 0 0 0 2px var(--amber)}
+  .err{min-height:1.4em;margin-top:12px;color:#FF8A7A;font-size:15px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/logo.svg" alt="">Link World</a>
+    <nav><a href="../#examples">Examples</a><a href="../#how">How it works</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="doc">
+    <span class="kicker">Open your page</span>
+    <h1>Paste your page code.</h1>
+    <p class="lede">If ChatGPT gave you a block of code (it starts with <code>{</code>) or a long Link World link, paste all of it here.</p>
+    <form id="f" novalidate>
+      <label class="sr" for="code">Page code</label>
+      <textarea id="code" spellcheck="false" autocapitalize="none" placeholder='{"name": "…", "layout": "…", …}'></textarea>
+      <p class="err" id="err" role="alert"></p>
+      <div class="row"><button class="btn primary" type="submit">Open my page</button><a class="btn ghost" href="../#start">Make a page first</a></div>
+    </form>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/logo.svg" alt="">Link World</a>
+    <nav><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a></nav>
+  </div>
+</footer>
+<script>
+(() => {
+  const err = document.getElementById('err');
+  const b64url = bytes => { let s = ''; bytes.forEach(b => { s += String.fromCharCode(b); }); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
+  document.getElementById('f').addEventListener('submit', async e => {
+    e.preventDefault(); err.textContent = '';
+    let text = document.getElementById('code').value.trim().replace(/^```(?:json)?\s*|\s*```$/g, '');
+    if (!text) { err.textContent = 'Paste the code first.'; return; }
+    const inLink = text.match(/#((?:z\.)?[A-Za-z0-9_-]{20,})/);
+    if (inLink && !text.startsWith('{')) { location.href = '../p/#' + inLink[1]; return; }
+    let spec;
+    try { spec = JSON.parse(text); } catch (_) { err.textContent = "That isn't complete page code. Copy the whole block from ChatGPT, from the first { to the last }."; return; }
+    if (!spec || typeof spec !== 'object' || Array.isArray(spec)) { err.textContent = "That isn't page code. It should start with { and end with }."; return; }
+    const raw = new TextEncoder().encode(JSON.stringify(spec));
+    let hash = b64url(raw);
+    try { hash = 'z.' + b64url(new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer())); } catch (_) { }
+    location.href = '../p/#' + hash;
+  });
+})();
+</script>
+</body>
+</html>

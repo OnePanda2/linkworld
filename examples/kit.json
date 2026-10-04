@@ -1,0 +1,34 @@
+{
+  "name": "Kit & Crumb",
+  "handle": "kitandcrumb",
+  "page": "example-kit",
+  "layout": "centered",
+  "theme": {
+    "bg": "#FFD84D", "bg2": "#FFC21A", "surface": "#FFE380", "text": "#2B1600", "muted": "#5A3A0E",
+    "accent": "#2B1600", "accentText": "#FFD84D",
+    "display": "Abril Fatface", "body": "Work Sans", "tracking": "normal",
+    "radius": "pill", "buttons": "solid", "cards": "flat", "bgStyle": "grain"
+  },
+  "hero": {
+    "eyebrow": "Sourdough · Saturdays only",
+    "headline": "Bread worth getting up for.",
+    "sub": "Naturally leavened loaves and laminated pastries from a tiny home bakery. Order by Thursday, pick up Saturday morning.",
+    "art": { "type": "emoji", "emoji": "🥐" }
+  },
+  "cta": { "label": "Order this week's box", "url": "https://example.com/order" },
+  "cta2": { "label": "See the menu", "url": "https://example.com/menu" },
+  "sections": [
+    { "type": "links", "items": [
+      { "label": "Pickup times and place", "note": "Saturdays, 8 to 11 am", "url": "https://example.com/pickup", "icon": "pin" },
+      { "label": "Sourdough class", "note": "Take home your own starter", "url": "https://example.com/class", "icon": "calendar" },
+      { "label": "The Crumb Sheet", "note": "Recipes, once a month", "url": "https://example.com/recipes", "icon": "book" } ] },
+    { "type": "quote", "text": "The cardamom bun is the reason I get up on Saturdays.", "by": "A regular" },
+    { "type": "faq", "title": "Good to know", "items": [
+      { "q": "Do you deliver?", "a": "Not yet. Pickup only, so the bread is still warm when you get it." },
+      { "q": "Anything without gluten?", "a": "Not safely. It's a small kitchen and flour gets everywhere." } ] }
+  ],
+  "socials": [
+    { "type": "instagram", "url": "https://www.instagram.com/" },
+    { "type": "tiktok", "url": "https://www.tiktok.com/" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Dani Reyes",
+  "handle": "danilifts",
+  "page": "example-dani",
+  "layout": "bento",
+  "theme": {
+    "bg": "#EFEFEA", "bg2": "#FFD3BF", "surface": "#FFFFFF", "text": "#121212", "muted": "#55554F",
+    "accent": "#FF5A1F", "accentText": "#111111",
+    "display": "Unbounded", "body": "Manrope", "displayWeight": 800, "tracking": "tight",
+    "radius": "round", "buttons": "solid", "cards": "shadow", "bgStyle": "dots"
+  },
+  "hero": {
+    "eyebrow": "Strength coach",
+    "headline": "Get strong in 30 minutes a day.",
+    "sub": "Home and gym plans that fit around a real job. No fads, no shouting, just progress you can see in twelve weeks.",
+    "art": { "type": "monogram" }
+  },
+  "cta": { "label": "Start the 12-week plan", "url": "https://example.com/plan" },
+  "cta2": { "label": "Free starter workout", "url": "https://example.com/free" },
+  "sections": [
+    { "type": "proof", "items": [ { "n": "1,200+", "l": "clients coached" }, { "n": "4.9★", "l": "app rating" } ] },
+    { "type": "links", "items": [
+      { "label": "12-week strength plan", "note": "The app, $19 a month", "url": "https://example.com/plan", "icon": "star" },
+      { "label": "Free starter workout", "note": "20 minutes, no gym needed", "url": "https://example.com/free", "icon": "gift" },
+      { "label": "1:1 coaching", "note": "3 spots left this month", "url": "https://example.com/coaching", "icon": "calendar" },
+      { "label": "YouTube", "note": "A new workout every Monday", "url": "https://www.youtube.com/" } ] },
+    { "type": "quote", "text": "I deadlifted my bodyweight at 41. Never thought I'd say that.", "by": "Jess, client since 2025" },
+    { "type": "list", "title": "What you get", "items": [
+      { "title": "Plans that adapt", "text": "Miss a day? The week rearranges itself.", "icon": "calendar" },
+      { "title": "Form checks", "text": "Send a video, get notes back within a day.", "icon": "play" },
+      { "title": "Meal ideas, not meal plans", "text": "Protein-first recipes that take 15 minutes.", "icon": "heart" },
+      { "title": "A coach who replies", "text": "Questions answered by me, not a bot.", "icon": "mail" } ] },
+    { "type": "follow", "title": "Train with me" }
+  ],
+  "socials": [
+    { "type": "instagram", "url": "https://www.instagram.com/" },
+    { "type": "tiktok", "url": "https://www.tiktok.com/" },
+    { "type": "youtube", "url": "https://www.youtube.com/" }
+  ]
+}

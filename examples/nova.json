@@ -1,0 +1,38 @@
+{
+  "name": "NOVA",
+  "handle": "nova.afterdark",
+  "page": "example-nova",
+  "layout": "poster",
+  "theme": {
+    "bg": "#08070D", "bg2": "#1B1340", "surface": "#141220", "text": "#F5F2FF", "muted": "#B5ADD3",
+    "accent": "#C6FF3D", "accentText": "#0A0A0A",
+    "display": "Anton", "body": "Chivo", "displayCase": "upper", "tracking": "normal",
+    "radius": "none", "buttons": "solid", "cards": "outline", "bgStyle": "solid"
+  },
+  "hero": {
+    "eyebrow": "Melodic techno · live sets",
+    "headline": "NOVA",
+    "sub": "Afterglow, the new EP, is out everywhere. The live show goes on tour this winter: twelve cities, one long night each.",
+    "art": { "type": "world", "world": "stage" }
+  },
+  "cta": { "label": "Listen to Afterglow", "url": "https://open.spotify.com/" },
+  "cta2": { "label": "Tour dates", "url": "https://example.com/tour" },
+  "sections": [
+    { "type": "proof", "items": [ { "n": "2.1M", "l": "monthly listens" }, { "n": "140+", "l": "shows played" }, { "n": "18", "l": "countries" } ] },
+    { "type": "ticker", "items": [ "Afterglow EP out now", "Winter tour 2026", "Bookings open" ] },
+    { "type": "links", "title": "Listen", "items": [
+      { "label": "Spotify", "note": "Afterglow and every release", "url": "https://open.spotify.com/" },
+      { "label": "SoundCloud", "note": "Two-hour live sets", "url": "https://soundcloud.com/" },
+      { "label": "Apple Music", "url": "https://music.apple.com/" },
+      { "label": "YouTube", "note": "Full shows, filmed", "url": "https://www.youtube.com/" } ] },
+    { "type": "offer", "badge": "Bookings", "title": "Clubs, festivals and late nights.", "text": "Live hybrid set or DJ set, two to four hours. Rider and tech spec on request.", "cta": { "label": "Email bookings", "url": "mailto:bookings@example.com" } },
+    { "type": "quote", "text": "The kind of set where nobody checks their phone.", "by": "Late Shift Radio" },
+    { "type": "follow", "title": "Follow the tour" }
+  ],
+  "socials": [
+    { "type": "instagram", "url": "https://www.instagram.com/" },
+    { "type": "tiktok", "url": "https://www.tiktok.com/" },
+    { "type": "soundcloud", "url": "https://soundcloud.com/" },
+    { "type": "youtube", "url": "https://www.youtube.com/" }
+  ]
+}
